@@ -1,17 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-import NavBar from './NavBar';
+import Nav from './Nav';
 import DogList from './DogList';
 import DogDetails from './DogDetails';
 import './App.css';
 
-function App(props) {
+function App({dogs} ) {
+  const dogNames = dogs.map((dog) => (dog.name));
+  
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <NavBar />
+          <Nav dogNames={dogNames} />
           <Route exact path="/dogs" >
             <DogList  /> 
           </Route>
@@ -29,7 +31,7 @@ App.defaultProps = {
     {
       name: "Whiskey",
       age: 5,
-      src: whiskey,
+      src: 'whiskey',
       facts: [
         "Whiskey loves eating popcorn.",
         "Whiskey is a terrible guard dog.",
@@ -39,7 +41,7 @@ App.defaultProps = {
     {
       name: "Duke",
       age: 3,
-      src: duke,
+      src: 'duke',
       facts: [
         "Duke believes that ball is life.",
         "Duke likes snow.",
@@ -49,7 +51,7 @@ App.defaultProps = {
     {
       name: "Perry",
       age: 4,
-      src: perry,
+      src: 'perry',
       facts: [
         "Perry loves all humans.",
         "Perry demolishes all snacks.",
@@ -59,7 +61,7 @@ App.defaultProps = {
     {
       name: "Tubby",
       age: 4,
-      src: tubby,
+      src: 'tubby',
       facts: [
         "Tubby is really stupid.",
         "Tubby does not like walks.",

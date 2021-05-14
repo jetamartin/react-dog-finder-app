@@ -1,0 +1,20 @@
+nav {
+  background-color:blue;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+
+nav a {
+  margin: 1rem
+}
+
+
+nav a.active {
+  color: white
+}
+
+nav a {
+  color: grey;
+}
+
