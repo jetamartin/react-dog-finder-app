@@ -1,0 +1,16 @@
+.DogDetails {
+  margin: 2rem;
+}
+.DogDetails p {
+  margin-bottom: 0;
+}
+
+.DogDetails span {
+  font-weight: bold;
+}
+
+.DogDetails img {
+  height: 50vh;
+  border-radius: 10%;
+  margin-bottom: .5rem;
+}

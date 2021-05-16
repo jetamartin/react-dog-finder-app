@@ -1,27 +1,25 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-
+import { BrowserRouter } from "react-router-dom";
 import Nav from './Nav';
-import DogList from './DogList';
-import DogDetails from './DogDetails';
+import Routes from './Routes'; 
+
+import whiskey from './images/whiskey.jpg';
+import duke from './images/duke.jpg';
+import perry from './images/perry.jpg';
+import tubby from './images/tubby.jpg'; 
+
 import './App.css';
 
 function App({dogs} ) {
+  // const dogNames = dogs.map((dog) => (dog.name));
   const dogNames = dogs.map((dog) => (dog.name));
+
   
   return (
-    <div className="App">
+    <div className="App container-fluid">
       <BrowserRouter>
-        <Switch>
-          <Nav dogNames={dogNames} />
-          <Route exact path="/dogs" >
-            <DogList  /> 
-          </Route>
-          <Route path="/dogs/:name" >
-            <DogDetails /> 
-          </Route>
-          <Redirect to="/dogs" />
-        </Switch>
+        <Nav dogNames={dogNames} />
+        <Routes dogs={dogs} />
       </BrowserRouter>
     </div>
   );
@@ -31,7 +29,7 @@ App.defaultProps = {
     {
       name: "Whiskey",
       age: 5,
-      src: 'whiskey',
+      src: whiskey,
       facts: [
         "Whiskey loves eating popcorn.",
         "Whiskey is a terrible guard dog.",
@@ -41,7 +39,7 @@ App.defaultProps = {
     {
       name: "Duke",
       age: 3,
-      src: 'duke',
+      src: duke,
       facts: [
         "Duke believes that ball is life.",
         "Duke likes snow.",
@@ -51,7 +49,7 @@ App.defaultProps = {
     {
       name: "Perry",
       age: 4,
-      src: 'perry',
+      src: perry,
       facts: [
         "Perry loves all humans.",
         "Perry demolishes all snacks.",
@@ -61,7 +59,7 @@ App.defaultProps = {
     {
       name: "Tubby",
       age: 4,
-      src: 'tubby',
+      src: tubby,
       facts: [
         "Tubby is really stupid.",
         "Tubby does not like walks.",

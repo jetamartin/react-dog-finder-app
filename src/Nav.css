@@ -1,20 +1,20 @@
 nav {
   background-color:blue;
+  text-align: center;
   margin: 1rem;
   padding: 1rem;
 }
-
 
 nav a {
   margin: 1rem
 }
 
-
 nav a.active {
-  color: white
+  color: white;
+  font-weight: bold;
 }
 
 nav a {
-  color: grey;
+  color: rgb(255,255,255, .75);
 }
 

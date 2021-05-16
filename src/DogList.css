@@ -1,0 +1,16 @@
+.DogList h1, .DogList h4 {
+  text-align: center;
+}
+
+.DogList-elements {
+  text-align: center;
+  background-color: aliceblue;
+  padding-top: .5rem;
+}
+
+
+.DogList-elements img {
+  border-radius: 5%;
+  margin-top: .5rem;
+  height:  50vh;
+}
